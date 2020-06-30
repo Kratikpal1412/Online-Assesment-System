@@ -1,0 +1,52 @@
+{% extends 'blog/leftpanel.html' %}
+{% load crispy_forms_tags %}
+
+{%block title%} Result Detail{%endblock%}
+{%block body%}  <div id="page-wrapper">
+        <div class="container">
+  <div class="card">
+    <div class="card-body col-md-12 text-center">
+    	<img src="{{user.profile.image.url}}" alt="User Image" style="width: 275px;"></div><br>
+  <form>
+  	 <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{user.username}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{user.email}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.quiz_name}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.obtain_score}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.total_score}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.date_posted}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.status}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div><br>
+    <div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="{{object.author}}">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
+    </div>
+    
+  </form>
+</div>
+
+  </div>
+  </div>
+</div>
+
+        <!-- /.container-fluid -->
+    </div> {%endblock%}

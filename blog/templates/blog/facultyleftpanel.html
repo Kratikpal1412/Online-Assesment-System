@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{%block title%}  {%endblock%}</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@media(min-width:768px) {
+   body{ font-size: 14px; color: #333; background:url(https://i.pinimg.com/originals/67/18/22/671822c2f63dd5f65d8fd15c9710420b.jpg) fixed;
+	 list-style: 26px;font-family: 'Roboto', sans-serif; }
+
+    /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+}
+.navbar-inverse {
+    background-color: ghostwhite;
+}
+#wrapper {
+    padding-left: 0;    
+}
+
+#page-wrapper {
+    width: 95%;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 6%;
+    margin-left: 2%;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 22px 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #1a242f;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 60px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        border-top: 1px rgba(0,0,0,.5) solid;
+        overflow-y: auto;
+        background-color: black;
+        /*background-color: #5A6B7D;*/
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+        border-bottom: 1px rgba(0,0,0,.3) solid;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #1a242f !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+    border-bottom: 1px rgba(0,0,0,.3) solid;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    /*color: #999;*/
+    color: #fff;    
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+.navbar .nav > li > a > .label {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: normal;
+  min-width: 15px;
+  min-height: 15px;
+  line-height: 1.0em;
+  text-align: center;
+  padding: 2px;
+}
+
+.navbar .nav > li > a:hover > .label {
+  top: 10px;
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+{%block css%}  {%endblock%}
+</style>
+</head>
+<body>
+	{% load static %}
+	<div id="throbber" style="display:none; min-height:120px;"></div>
+	}
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation --> 
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    	<button type="button" onclick="window.location.href='http://localhost:8000/post/new/';" class="btn btn-primary" style="margin-left: 78%;">Create Test</button>
+       <button type="button" class="btn btn-primary">Announcement</button>
+       <a href="http://localhost:8000/notification/new"> <button type="button" class="btn btn-primary">Notification</button></a>
+
+       
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+            	<li>
+            	<div class="pull-left image">
+               <img src="{{user.profile.image.url}}" class="rounded-circle" alt="User Image" style=" width: 100%;max-width: 57px;  height: auto;">
+            </div>
+            <div class="pull-right info" style="margin-right: 27%;">
+              	<p style="color: white;">Welcome {{user.username}}</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+            	</li>
+                <li>
+                    <a href="http://localhost:8000/home"><i class="fa fa-home"></i>&nbsp;Home<span class="fa fa-chevron-right pull-right"></span></a>
+                   
+                </li>
+                <li>
+                    <a href="http://localhost:8000/addexam"><i class="fa fa-th-large"></i>&nbsp;Exam deatils<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/report"><i class="fa fa-diamond"></i>&nbsp;View Assigment<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/report"><i class="fa fa-bar-chart-o"></i>&nbsp;Result<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/profile"><i class="fa fa-fw fa fa-question-circle"></i>&nbsp;Profile<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/changepassword"><i class="fa fa-key"></i>&nbsp;Change Password<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/logout"><i class="fa fa-sign-out"></i>&nbsp;Log-out<span class="fa fa-chevron-right pull-right"></span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    {%block body%} {%endblock%}
+   
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+<script type="text/javascript">
+	$(document).ready(function(){
+   $('.button-left').click(function(){
+       $('.sidebar').toggleClass('fliph');
+   });
+     
+});
+</body>
+</html>

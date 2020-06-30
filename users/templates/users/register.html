@@ -1,0 +1,27 @@
+<style type="text/css">
+    body {
+    margin:0;
+    color:#edf3ff;
+    background:#c8c8c8;
+    background:url(https://i.pinimg.com/originals/67/18/22/671822c2f63dd5f65d8fd15c9710420b.jpg) fixed;
+    background-size: cover;
+    font:400 16px/18px 'Open Sans',sans-serif;
+    }
+</style>
+{% load crispy_forms_tags %}
+	<div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="http://localhost:8000/flogin">Sign In</a>
+            </small>
+        </form>
+    </div>
+</html>

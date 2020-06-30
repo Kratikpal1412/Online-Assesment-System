@@ -1,0 +1,39 @@
+{% extends 'blog/facultyleftpanel.html' %}
+
+{%block title%}Exam Details {%endblock%}
+{%block body%}  <div id="page-wrapper">
+        <div class="container">
+  <h2 class="text-center" style="text-decoration: underline;">Upcoming Exam Details</h2>
+  <div class="card">
+  <table class="col-md-12">
+    <thead>
+      <tr>
+        <th >Exam Name</th>
+        <th >Start Date</th>
+        <th >End Date</th>
+        <th >Date Posted</th>
+        <th >Total Marks</th>
+        <th >Author</th>
+        <th >Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <td>{{ post.exam_name}}</td>
+        <td>{{ post.start_date}}</td>
+        <td>{{ post.end_date}}</td>
+        <td>{{ post.date_posted|date:"F d,Y"}}</td>
+        <td>{{ post.total_score}}</td>
+        <td>{{ post.author}}</td>
+        <td><button type="button" class="btn btn-primary">Details</button></td>
+      </tr>
+      {% endfor %}
+  
+    </tbody>
+    </div>
+  </div>
+</div>
+
+        <!-- /.container-fluid -->
+    </div> {%endblock%}

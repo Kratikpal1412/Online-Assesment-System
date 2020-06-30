@@ -1,0 +1,31 @@
+{% extends 'blog/facultyleftpanel.html' %}
+
+{%block title%}Add Exam {%endblock%}
+{% load crispy_forms_tags %}
+
+
+{%block body%}  <div id="page-wrapper">
+        <div class="container">
+  <h2 class="text-center" style="text-decoration: underline;">Add Exam</h2>
+  <div class="card">
+    </div> {%endblock%}
+      <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="http://localhost:8000/flogin">Sign In</a>
+            </small>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+        <!-- /.container-fluid -->
